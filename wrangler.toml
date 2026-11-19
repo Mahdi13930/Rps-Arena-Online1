@@ -1,0 +1,23 @@
+name = "rps-arena-online1"
+main = "src/index.js"
+compatibility_date = "2026-11-19"
+workers_dev = true
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "rps-arena-online1-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+[[durable_objects.bindings]]
+name = "ROOMS"
+class_name = "RPSRoom"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["RPSRoom"]
