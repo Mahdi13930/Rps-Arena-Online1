@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b1020"><meta name="description" content="RPS Arena — بازی آنلاین سنگ، کاغذ، قیچی">
+  <title>RPS Arena</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<div class="app-shell">
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="RPS Arena"><span class="brand-mark">RPS</span><span><b>RPS ARENA</b><small>ROCK PAPER SCISSORS</small></span></a>
+    <div class="top-user"><span class="live-dot"></span><span id="connectionText">آماده ورود</span><span class="user-chip" id="userChip">بازیکن</span></div>
+  </header>
+  <main>
+    <section id="homePage" class="page active">
+      <section class="hero panel">
+        <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-line"></span> بازی ساده، رقابت واقعی</div>
+          <h1>سنگ، کاغذ، قیچی<br><span>آماده‌ای؟</span></h1>
+          <p>نامت را وارد کن، اتاق بساز و با کد اتاق دوستت را به یک مسابقه آنلاین دعوت کن.</p>
+          <div class="hero-actions"><button class="primary-btn" id="goOnlineBtn">شروع بازی <span>←</span></button></div>
+          <div class="hero-meta"><span>⚡ آنلاین و زنده</span><span>🎮 دو نفره</span><span>🔒 اتاق خصوصی</span></div>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="arena-core"><span>✊</span><span>✋</span><span>✌️</span></div><div class="float-tag tag-top">LIVE MATCH</div><div class="float-tag tag-bottom">PLAY WITH FRIENDS</div></div>
+      </section>
+      <section id="lobbySection" class="lobby-section hidden">
+        <div class="section-heading"><div><div class="eyebrow">GAME LOBBY</div><h2>انتخاب بازی</h2><p>اتاق بساز یا با کد وارد اتاق دوستت شو.</p></div><span class="secure-label">● آماده بازی</span></div>
+        <div class="lobby-grid">
+          <article class="action-card create-card"><div class="card-icon">＋</div><h3>ساخت اتاق</h3><p>یک اتاق بساز و کد شش‌رقمی را برای دوستت بفرست.</p><button class="primary-btn full-btn" id="createRoomBtn">ساخت اتاق <span>←</span></button></article>
+          <article class="action-card join-card"><div class="card-icon">⌁</div><h3>ورود به اتاق</h3><p>کد شش‌رقمی دوستت را وارد کن.</p><label class="input-label" for="roomCodeInput">کد اتاق</label><input id="roomCodeInput" class="code-input" inputmode="numeric" maxlength="6" placeholder="مثلاً ۴۸۲۹۱۵"><button class="secondary-btn full-btn" id="joinRoomBtn">ورود به اتاق <span>←</span></button></article>
+        </div>
+      </section>
+      <section id="matchSection" class="match-section hidden">
+        <div class="match-head"><div><div class="eyebrow">LIVE MATCH</div><h2>مسابقه</h2></div><div class="room-badge">کد اتاق <b id="roomCodeLabel">------</b><button id="copyCodeBtn" title="کپی کد">▢</button></div></div>
+        <div class="match-panel panel">
+          <div class="players-row"><div class="player-card" id="playerOne"><div class="avatar">👤</div><b id="playerOneName">شما</b><small id="playerOneStatus">متصل</small></div><div class="versus"><span>VS</span><small id="roundLabel">آماده‌سازی</small></div><div class="player-card" id="playerTwo"><div class="avatar opponent-avatar">👤</div><b id="playerTwoName">در انتظار حریف...</b><small id="playerTwoStatus">منتظر ورود بازیکن</small></div></div>
+          <div id="waitingBox" class="waiting-box"><span class="loader"></span><div><b>منتظر ورود حریف هستیم</b><p>کد اتاق را برای دوستت بفرست.</p></div></div>
+          <div id="playBox" class="play-box hidden"><div class="play-title"><b id="playTitle">حرکت خودت را انتخاب کن</b><span id="moveHint">هر دو بازیکن باید انتخاب کنند</span></div><div class="moves"><button class="move-btn" data-choice="rock"><span>✊</span><b>سنگ</b></button><button class="move-btn" data-choice="paper"><span>✋</span><b>کاغذ</b></button><button class="move-btn" data-choice="scissors"><span>✌️</span><b>قیچی</b></button></div><div id="resultBox" class="result-box hidden" aria-live="polite"></div><div class="match-actions"><button class="secondary-btn hidden" id="rematchBtn">بازی مجدد</button><button class="ghost-btn" id="leaveRoomBtn">خروج</button></div></div>
+        </div>
+      </section>
+    </section>
+  </main>
+  <footer><span>RPS ARENA</span><span>فقط بازی؛ بدون حساب کاربری و رنکینگ</span><span>© 2026</span></footer>
+</div>
+</body></html>
